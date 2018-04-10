@@ -1,0 +1,13 @@
+C:\Users\Pelle\source\repos\IntershipProyect\Logic\bin\Debug\Logic.dll
+C:\Users\Pelle\source\repos\IntershipProyect\Logic\bin\Debug\Logic.pdb
+C:\Users\Pelle\source\repos\IntershipProyect\Logic\obj\Debug\Logic.csproj.CoreCompileInputs.cache
+C:\Users\Pelle\source\repos\IntershipProyect\Logic\obj\Debug\Logic.dll
+C:\Users\Pelle\source\repos\IntershipProyect\Logic\obj\Debug\Logic.pdb
+C:\Users\Pelle\source\repos\IntershipProyect\Logic\bin\Debug\Data.dll
+C:\Users\Pelle\source\repos\IntershipProyect\Logic\bin\Debug\Entities.dll
+C:\Users\Pelle\source\repos\IntershipProyect\Logic\bin\Debug\Dapper.dll
+C:\Users\Pelle\source\repos\IntershipProyect\Logic\bin\Debug\Data.pdb
+C:\Users\Pelle\source\repos\IntershipProyect\Logic\bin\Debug\Entities.pdb
+C:\Users\Pelle\source\repos\IntershipProyect\Logic\bin\Debug\Dapper.xml
+C:\Users\Pelle\source\repos\IntershipProyect\Logic\obj\Debug\Logic.csprojResolveAssemblyReference.cache
+C:\Users\Pelle\source\repos\IntershipProyect\Logic\obj\Debug\Logic.csproj.CopyComplete

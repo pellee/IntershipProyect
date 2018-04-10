@@ -1,0 +1,11 @@
+C:\Users\Pelle\source\repos\IntershipProyect\Data\bin\Debug\Data.dll
+C:\Users\Pelle\source\repos\IntershipProyect\Data\bin\Debug\Data.pdb
+C:\Users\Pelle\source\repos\IntershipProyect\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+C:\Users\Pelle\source\repos\IntershipProyect\Data\obj\Debug\Data.dll
+C:\Users\Pelle\source\repos\IntershipProyect\Data\obj\Debug\Data.pdb
+C:\Users\Pelle\source\repos\IntershipProyect\Data\bin\Debug\Dapper.dll
+C:\Users\Pelle\source\repos\IntershipProyect\Data\bin\Debug\Entities.dll
+C:\Users\Pelle\source\repos\IntershipProyect\Data\bin\Debug\Entities.pdb
+C:\Users\Pelle\source\repos\IntershipProyect\Data\bin\Debug\Dapper.xml
+C:\Users\Pelle\source\repos\IntershipProyect\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+C:\Users\Pelle\source\repos\IntershipProyect\Data\obj\Debug\Data.csproj.CopyComplete
