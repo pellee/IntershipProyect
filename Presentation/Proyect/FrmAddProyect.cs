@@ -45,9 +45,15 @@ namespace Presentation
             txtSlot.ResetText();
         }
 
-        private void ChangeValidation(ref bool validation, bool value) { validation = value; }
+        private void ChangeValidation(ref bool validation, bool value)
+        {
+            validation = value;
+        }
 
-        private void ChangeEntries(ref string entries, string value) { entries += (value + "\n"); }
+        private void ChangeEntries(ref string entries, string value)
+        {
+            entries += (value + "\n");
+        }
 
         private bool ValidateForm()
         {
