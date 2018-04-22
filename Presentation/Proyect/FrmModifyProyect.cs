@@ -22,5 +22,10 @@ namespace Presentation
         {
             // TODO - hacer que modifique los datos que selecciono el usuario.
         }
+
+        private void FrmModifyProyect_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

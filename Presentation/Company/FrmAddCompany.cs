@@ -16,5 +16,18 @@ namespace Presentation
         {
             InitializeComponent();
         }
+
+        private void btnCreateProyect_Click(object sender, EventArgs e)
+        {
+            FrmAddProyect frmProyect = new FrmAddProyect();
+
+            frmProyect.Show();
+            Close();
+        }
+
+        private void FrmAddCompany_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -105,6 +105,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmSearcherCompany";
             this.Text = "BUSCAR EMPRESA";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmSearcherCompany_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompanies)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

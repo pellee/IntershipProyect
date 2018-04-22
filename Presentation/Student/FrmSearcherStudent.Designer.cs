@@ -123,6 +123,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmSearcherStudent";
             this.Text = "BUSCAR ALUMNOS";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmSearcherStudent_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

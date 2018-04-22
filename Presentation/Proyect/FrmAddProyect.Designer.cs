@@ -306,6 +306,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmAddProyect";
             this.Text = "AGREGAR PROYECTO";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAddProyect_FormClosed);
             this.tlpProyect.ResumeLayout(false);
             this.tlpProyect.PerformLayout();
             this.tlpProyect2.ResumeLayout(false);

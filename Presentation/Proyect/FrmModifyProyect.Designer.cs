@@ -115,6 +115,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmModifyProyect";
             this.Text = "FrmModifyProyect";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmModifyProyect_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

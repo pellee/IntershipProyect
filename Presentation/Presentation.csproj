@@ -51,16 +51,16 @@
     <Compile Include="Company\FrmAddCompany.Designer.cs">
       <DependentUpon>FrmAddCompany.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMainMenu.cs">
+    <Compile Include="MainMenu\FrmMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMainMenu.Designer.cs">
+    <Compile Include="MainMenu\FrmMainMenu.Designer.cs">
       <DependentUpon>FrmMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSelectionProyect.cs">
+    <Compile Include="Proyect\FrmSelectionProyect.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSelectionProyect.Designer.cs">
+    <Compile Include="Proyect\FrmSelectionProyect.Designer.cs">
       <DependentUpon>FrmSelectionProyect.cs</DependentUpon>
     </Compile>
     <Compile Include="Proyect\FrmAddProyect.cs">
@@ -116,10 +116,10 @@
     <EmbeddedResource Include="Company\FrmAddCompany.resx">
       <DependentUpon>FrmAddCompany.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMainMenu.resx">
+    <EmbeddedResource Include="MainMenu\FrmMainMenu.resx">
       <DependentUpon>FrmMainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSelectionProyect.resx">
+    <EmbeddedResource Include="Proyect\FrmSelectionProyect.resx">
       <DependentUpon>FrmSelectionProyect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Proyect\FrmAddProyect.resx">
@@ -178,8 +178,6 @@
       <Name>Logic</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MainMenu\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

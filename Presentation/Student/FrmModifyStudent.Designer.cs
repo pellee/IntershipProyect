@@ -114,6 +114,7 @@
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "FrmModifyStudent";
             this.Text = "MODIFICAR ALUMNO";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmModifyStudent_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

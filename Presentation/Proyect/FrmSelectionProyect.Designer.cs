@@ -90,6 +90,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmSelectionProyect";
             this.Text = "SELECIÓN ACCIÓN";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmSelectionProyect_FormClosed);
             this.tlpMainMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 

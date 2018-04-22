@@ -99,6 +99,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmSearcherProyect";
             this.Text = "BUSCAR PROYECTO";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmSearcherProyect_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProyects)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

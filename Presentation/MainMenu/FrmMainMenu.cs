@@ -29,5 +29,13 @@ namespace Presentation
         {
             Application.Exit();
         }
+
+        private void btnCompany_Click(object sender, EventArgs e)
+        {
+            FrmAddCompany frmCompany = new FrmAddCompany();
+
+            frmCompany.Show();
+            Hide();
+        }
     }
 }

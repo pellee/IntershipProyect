@@ -36,5 +36,10 @@ namespace Presentation
             frmMainMenu.Show();
             Close();
         }
+
+        private void FrmSearcherProyect_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

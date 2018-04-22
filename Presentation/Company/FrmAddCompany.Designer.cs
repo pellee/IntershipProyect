@@ -228,6 +228,7 @@
             this.btnCreateProyect.TabIndex = 19;
             this.btnCreateProyect.Text = "CREAR PROYECTO";
             this.btnCreateProyect.UseVisualStyleBackColor = true;
+            this.btnCreateProyect.Click += new System.EventHandler(this.btnCreateProyect_Click);
             // 
             // FrmAddCompany
             // 
@@ -246,6 +247,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FrmAddCompany";
             this.Text = "AGREGAR ALUMNO";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAddCompany_FormClosed);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

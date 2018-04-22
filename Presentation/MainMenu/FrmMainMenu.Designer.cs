@@ -95,6 +95,7 @@
             this.btnCompany.TabIndex = 16;
             this.btnCompany.Text = "EMPRESA";
             this.btnCompany.UseVisualStyleBackColor = true;
+            this.btnCompany.Click += new System.EventHandler(this.btnCompany_Click);
             // 
             // FrmMainMenu
             // 

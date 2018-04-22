@@ -115,6 +115,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmModifyCompany";
             this.Text = "MODIFICAR EMPRESA";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmModifyCompany_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

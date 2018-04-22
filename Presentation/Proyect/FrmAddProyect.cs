@@ -97,5 +97,10 @@ namespace Presentation
 
             return validation;
         }
+
+        private void FrmAddProyect_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -32,5 +32,10 @@ namespace Presentation
             frmSearcherProyect.Show();
             Close();
         }
+
+        private void FrmSelectionProyect_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
