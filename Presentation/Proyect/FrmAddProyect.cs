@@ -33,6 +33,10 @@ namespace Presentation
                     MessageBox.Show(ex.Message);
                 }
             }
+
+            FrmMainMenu frmMainMenu = new FrmMainMenu();
+            frmMainMenu.Show();
+            Close();
         }
         
         private void FocusAndCleanForm()

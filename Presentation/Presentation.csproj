@@ -51,6 +51,18 @@
     <Compile Include="Company\FrmAddCompany.Designer.cs">
       <DependentUpon>FrmAddCompany.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMainMenu.Designer.cs">
+      <DependentUpon>FrmMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSelectionProyect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSelectionProyect.Designer.cs">
+      <DependentUpon>FrmSelectionProyect.cs</DependentUpon>
+    </Compile>
     <Compile Include="Proyect\FrmAddProyect.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +115,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Company\FrmAddCompany.resx">
       <DependentUpon>FrmAddCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMainMenu.resx">
+      <DependentUpon>FrmMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSelectionProyect.resx">
+      <DependentUpon>FrmSelectionProyect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Proyect\FrmAddProyect.resx">
       <DependentUpon>FrmAddProyect.cs</DependentUpon>
@@ -161,7 +179,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\" />
+    <Folder Include="MainMenu\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

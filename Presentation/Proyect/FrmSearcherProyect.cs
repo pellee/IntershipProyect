@@ -31,6 +31,10 @@ namespace Presentation
         private void btnModifyPro_Click(object sender, EventArgs e)
         {
             // TODO - Cuando eliga el proyecto que se quiere modificar mostrar el otro Frm.
+
+            FrmMainMenu frmMainMenu = new FrmMainMenu();
+            frmMainMenu.Show();
+            Close();
         }
     }
 }
