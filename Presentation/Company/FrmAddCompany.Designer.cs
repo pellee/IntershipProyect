@@ -42,6 +42,7 @@
             this.lblNameCom = new System.Windows.Forms.Label();
             this.lblCuilCom = new System.Windows.Forms.Label();
             this.btnCreateProyect = new System.Windows.Forms.Button();
+            this.btnAddProyect = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +57,7 @@
             this.btnRemove.TabIndex = 18;
             this.btnRemove.Text = "QUITAR";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // lblProyects
             // 
@@ -222,13 +224,26 @@
             this.btnCreateProyect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateProyect.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateProyect.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnCreateProyect.Location = new System.Drawing.Point(97, 382);
+            this.btnCreateProyect.Location = new System.Drawing.Point(198, 385);
             this.btnCreateProyect.Name = "btnCreateProyect";
-            this.btnCreateProyect.Size = new System.Drawing.Size(172, 27);
+            this.btnCreateProyect.Size = new System.Drawing.Size(172, 53);
             this.btnCreateProyect.TabIndex = 19;
             this.btnCreateProyect.Text = "CREAR PROYECTO";
             this.btnCreateProyect.UseVisualStyleBackColor = true;
             this.btnCreateProyect.Click += new System.EventHandler(this.btnCreateProyect_Click);
+            // 
+            // btnAddProyect
+            // 
+            this.btnAddProyect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddProyect.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddProyect.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnAddProyect.Location = new System.Drawing.Point(10, 385);
+            this.btnAddProyect.Name = "btnAddProyect";
+            this.btnAddProyect.Size = new System.Drawing.Size(172, 53);
+            this.btnAddProyect.TabIndex = 20;
+            this.btnAddProyect.Text = "AGREGAR PROYECTO";
+            this.btnAddProyect.UseVisualStyleBackColor = true;
+            this.btnAddProyect.Click += new System.EventHandler(this.btnAddProyect_Click);
             // 
             // FrmAddCompany
             // 
@@ -236,6 +251,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(800, 575);
+            this.Controls.Add(this.btnAddProyect);
             this.Controls.Add(this.btnCreateProyect);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.lblProyects);
@@ -271,5 +287,6 @@
         private System.Windows.Forms.Label lblNameCom;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button btnCreateProyect;
+        private System.Windows.Forms.Button btnAddProyect;
     }
 }

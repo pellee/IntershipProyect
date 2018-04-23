@@ -20,6 +20,10 @@ namespace Logic
             dataProyect.CreateProyect(proyect);
         }
 
+        /// <summary>
+        /// Llama a la capa de Data y trae todos los proyectos que estan guardados en la DB
+        /// </summary>
+        /// <returns>Devuelve una lista de todos los proyectos</returns>
         public List<Entities.Proyect> GetAllProyects()
         {
             Data.Proyect dataProyect = new Data.Proyect();
