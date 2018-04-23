@@ -45,7 +45,7 @@ namespace Presentation
             FrmAddProyect frmProyect = new FrmAddProyect();
 
             frmProyect.Show();
-            Close();
+            Hide();
         }
 
         private void FrmAddCompany_FormClosed(object sender, FormClosedEventArgs e)

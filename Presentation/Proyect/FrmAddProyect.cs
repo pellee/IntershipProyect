@@ -36,7 +36,7 @@ namespace Presentation
 
             FrmMainMenu frmMainMenu = new FrmMainMenu();
             frmMainMenu.Show();
-            Close();
+            Hide();
         }
         
         private void FocusAndCleanForm()
