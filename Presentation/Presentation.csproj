@@ -51,18 +51,6 @@
     <Compile Include="Company\FrmAddCompany.Designer.cs">
       <DependentUpon>FrmAddCompany.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenu\FrmMainMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainMenu\FrmMainMenu.Designer.cs">
-      <DependentUpon>FrmMainMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Proyect\FrmSelectionProyect.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Proyect\FrmSelectionProyect.Designer.cs">
-      <DependentUpon>FrmSelectionProyect.cs</DependentUpon>
-    </Compile>
     <Compile Include="Proyect\FrmAddProyect.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,76 +63,16 @@
     <Compile Include="Student\FrmAddStudent.Designer.cs">
       <DependentUpon>FrmAddStudent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\FrmModifyCompany.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Company\FrmModifyCompany.Designer.cs">
-      <DependentUpon>FrmModifyCompany.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Proyect\FrmModifyProyect.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Proyect\FrmModifyProyect.Designer.cs">
-      <DependentUpon>FrmModifyProyect.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Student\FrmModifyStudent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Student\FrmModifyStudent.Designer.cs">
-      <DependentUpon>FrmModifyStudent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Company\FrmSearcherCompany.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Company\FrmSearcherCompany.Designer.cs">
-      <DependentUpon>FrmSearcherCompany.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Proyect\FrmSearcherProyect.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Proyect\FrmSearcherProyect.Designer.cs">
-      <DependentUpon>FrmSearcherProyect.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Student\FrmSearcherStudent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Student\FrmSearcherStudent.Designer.cs">
-      <DependentUpon>FrmSearcherStudent.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Company\FrmAddCompany.resx">
       <DependentUpon>FrmAddCompany.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainMenu\FrmMainMenu.resx">
-      <DependentUpon>FrmMainMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Proyect\FrmSelectionProyect.resx">
-      <DependentUpon>FrmSelectionProyect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Proyect\FrmAddProyect.resx">
       <DependentUpon>FrmAddProyect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student\FrmAddStudent.resx">
       <DependentUpon>FrmAddStudent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Company\FrmModifyCompany.resx">
-      <DependentUpon>FrmModifyCompany.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Proyect\FrmModifyProyect.resx">
-      <DependentUpon>FrmModifyProyect.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Student\FrmModifyStudent.resx">
-      <DependentUpon>FrmModifyStudent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Company\FrmSearcherCompany.resx">
-      <DependentUpon>FrmSearcherCompany.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Proyect\FrmSearcherProyect.resx">
-      <DependentUpon>FrmSearcherProyect.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Student\FrmSearcherStudent.resx">
-      <DependentUpon>FrmSearcherStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

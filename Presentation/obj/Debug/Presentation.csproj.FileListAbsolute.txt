@@ -8,14 +8,8 @@ C:\Users\Pelle\source\repos\IntershipProyect\Presentation\bin\Debug\Presentation
 C:\Users\Pelle\source\repos\IntershipProyect\Presentation\bin\Debug\Presentation.pdb
 C:\Users\Pelle\source\repos\IntershipProyect\Presentation\obj\Debug\Presentation.exe
 C:\Users\Pelle\source\repos\IntershipProyect\Presentation\obj\Debug\Presentation.pdb
-C:\Users\Pelle\source\repos\IntershipProyect\Presentation\obj\Debug\Presentation.FrmSearcherStudent.resources
 C:\Users\Pelle\source\repos\IntershipProyect\Presentation\obj\Debug\Presentation.FrmAddCompany.resources
 C:\Users\Pelle\source\repos\IntershipProyect\Presentation\obj\Debug\Presentation.FrmAddProyect.resources
-C:\Users\Pelle\source\repos\IntershipProyect\Presentation\obj\Debug\Presentation.FrmModifyCompany.resources
-C:\Users\Pelle\source\repos\IntershipProyect\Presentation\obj\Debug\Presentation.FrmModifyProyect.resources
-C:\Users\Pelle\source\repos\IntershipProyect\Presentation\obj\Debug\Presentation.FrmModifyStudent.resources
-C:\Users\Pelle\source\repos\IntershipProyect\Presentation\obj\Debug\Presentation.FrmSearcherCompany.resources
-C:\Users\Pelle\source\repos\IntershipProyect\Presentation\obj\Debug\Presentation.FrmSearcherProyect.resources
 C:\Users\Pelle\source\repos\IntershipProyect\Presentation\bin\Debug\Entities.dll
 C:\Users\Pelle\source\repos\IntershipProyect\Presentation\bin\Debug\Logic.dll
 C:\Users\Pelle\source\repos\IntershipProyect\Presentation\bin\Debug\Data.dll
@@ -25,5 +19,3 @@ C:\Users\Pelle\source\repos\IntershipProyect\Presentation\bin\Debug\Logic.pdb
 C:\Users\Pelle\source\repos\IntershipProyect\Presentation\bin\Debug\Data.pdb
 C:\Users\Pelle\source\repos\IntershipProyect\Presentation\bin\Debug\Dapper.xml
 C:\Users\Pelle\source\repos\IntershipProyect\Presentation\obj\Debug\Presentation.csproj.CopyComplete
-C:\Users\Pelle\source\repos\IntershipProyect\Presentation\obj\Debug\Presentation.FrmMainMenu.resources
-C:\Users\Pelle\source\repos\IntershipProyect\Presentation\obj\Debug\Presentation.FrmSelectionProyect.resources

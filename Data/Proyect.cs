@@ -20,18 +20,13 @@ namespace Data
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnectionSql.CnnString("Pasantia")))
             {
                 var parameters = new DynamicParameters();
-                //int i = 0;
-
-                //if (proyect.Status)
-                //    i = 1;
 
 
                 parameters.Add("@NamePro", proyect.NamePro);
                 parameters.Add("@GoalPro", proyect.GoalPro);
                 parameters.Add("@KindPro", proyect.KindPro);
                 parameters.Add("@HoursPro", proyect.HoursPro);
-                parameters.Add("@StatusPro", proyect.Status);
-                parameters.Add("@StarDatePro", proyect.StartDatePro);
+                parameters.Add("@StartDatePro", proyect.StartDatePro);
                 parameters.Add("@EndDatePro", proyect.EndDatePro);
                 parameters.Add("@Slots", proyect.Slots);
 

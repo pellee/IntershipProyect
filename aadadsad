@@ -1,0 +1,54 @@
+[33mcommit a4b7bf66babf94c8dac9ade7dea5cf8335966e59[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Pelle <joaquinpellegrino@gmail.com>
+Date:   Mon Apr 23 19:21:17 2018 -0300
+
+    Correccion de pequeño error
+
+[33mcommit 7069cb11a4c029e29bff94b17370791c2dfdbb97[m
+Author: Pelle <joaquinpellegrino@gmail.com>
+Date:   Mon Apr 23 19:07:00 2018 -0300
+
+    relaciono el menu principal con el form para agregar una empresa. Tambien, cuando selecciono un proyecto del combo box lo agrega a la lista y cuando lo quito de la lista lo vuelve a poner dentro del combo box
+
+[33mcommit 598aa7471e194cc82778fdd6425e7891ca5d5352[m
+Author: Pelle <joaquinpellegrino@gmail.com>
+Date:   Sun Apr 22 20:02:11 2018 -0300
+
+    Cuando se toca la cruz en alguno de los form se cierra el proyecto
+
+[33mcommit fdb793dea593efd4a720431023d418e10e77cf8f[m
+Merge: 005aead d40ac82
+Author: Pelle <joaquinpellegrino@gmail.com>
+Date:   Sun Apr 22 19:49:02 2018 -0300
+
+    algo
+
+[33mcommit 005aead48266b0875abe12cdddbd0aa211c6353d[m
+Author: Pelle <joaquinpellegrino@gmail.com>
+Date:   Sun Apr 22 19:46:36 2018 -0300
+
+    mensaje
+
+[33mcommit 2c88d1d7c297598565d7e54944700fc5082b26a7[m
+Author: Pelle <joaquinpellegrino@gmail.com>
+Date:   Sun Apr 22 19:31:07 2018 -0300
+
+    fusione las 2 ramas
+
+[33mcommit d40ac82109fdc32c0030250b7e4eb699c53dbb84[m[33m ([m[1;31morigin/branchFrmMainMenu[m[33m)[m
+Author: Pelle <joaquinpellegrino@gmail.com>
+Date:   Wed Apr 11 20:20:53 2018 -0300
+
+    no se que onda con esto
+
+[33mcommit c66eb2d0ffde13a37e31c4bd59afd2ddfc6c3060[m
+Author: Pelle <joaquinpellegrino@gmail.com>
+Date:   Wed Apr 11 20:17:43 2018 -0300
+
+    agrego el menu principal. LLeva a los demas forms
+
+[33mcommit 41e52d563d1404c5e29ea0b94ebb9be2f1945d2f[m
+Author: Pelle <joaquinpellegrino@gmail.com>
+Date:   Tue Apr 10 20:11:39 2018 -0300
+
+    Empiezo con git

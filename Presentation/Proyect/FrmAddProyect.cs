@@ -20,28 +20,24 @@ namespace Presentation
         private void btnCreateProyect_Click(object sender, EventArgs e)
         {
             if (ValidateForm()) {
+                var logProyect = new Logic.Proyect();
+                var frm = new FrmAddCompany();
 
-                try {
-                    var logProyect = new Logic.Proyect();
-                    var entProyect = new Entities.Proyect(txtName.Text, txtGoal.Text, txtKindPro.Text, txtHoursPro.Text, dtpStartDate.Text, dtpEndDate.Text, txtSlot.Text);
+                var entProyect = new Entities.Proyect(txtName.Text, txtGoal.Text, txtKindPro.Text, txtHoursPro.Text, dtpStartDate.Text, dtpEndDate.Text, txtSlot.Text);
 
-                    FocusAndCleanForm();
+                logProyect.CreateProyect(entProyect);
 
-                    logProyect.CreateProyect(entProyect);
-                }
-                catch (Exception ex) {
-                    MessageBox.Show(ex.Message);
-                }
+                frm.Show();
+                Close();
             }
-
-            FrmMainMenu frmMainMenu = new FrmMainMenu();
-            frmMainMenu.Show();
-            Hide();
+            else
+                FocusAndCleanForm();
         }
         
         private void FocusAndCleanForm()
         {
             txtName.Focus();
+
             txtName.ResetText();
             txtGoal.ResetText();
             txtHoursPro.ResetText();
@@ -49,58 +45,43 @@ namespace Presentation
             txtSlot.ResetText();
         }
 
-        private void ChangeValidation(ref bool validation, bool value)
-        {
-            validation = value;
-        }
-
-        private void ChangeEntries(ref string entries, string value)
-        {
-            entries += (value + "\n");
-        }
-
         private bool ValidateForm()
         {
-            bool validation = true;
-            string[] badEntries = new string[5] { "Nombre mal ingresado", "objetivo mal ingresado", "tipo pro mal ingresado", "horas pro mal ingresado", "vacante mal ingresado" };
-            string entries = "";
+            bool status = true;
+            string[] badmsg = new string[5] { "Nombre mal ingresado", "objetivo mal ingresado", "tipo pro mal ingresado", "horas pro mal ingresado", "vacante mal ingresado" };
+            string msg = "";
 
             if(txtName.Text.Length == 0) {
-                ChangeValidation(ref validation, false);
-                ChangeEntries(ref entries, badEntries[0]);
+                status = false;
+                msg += badmsg[0];
             }
 
             if(txtGoal.Text.Length == 0) {
-                ChangeValidation(ref validation, false);
-                ChangeEntries(ref entries, badEntries[1]);
+                status = false;
+                msg += badmsg[1];
             }
 
             if(txtKindPro.Text.Length == 0) {
-                ChangeValidation(ref validation, false);
-                ChangeEntries(ref entries, badEntries[2]);
+                status = false;
+                msg += badmsg[2];
             }
 
             if(txtHoursPro.Text.Length == 0) {
-                ChangeValidation(ref validation, false);
-                ChangeEntries(ref entries, badEntries[3]);
+                status = false;
+                msg += badmsg[3];
             }
 
             if (!int.TryParse(txtSlot.Text, out int a)) {
-                ChangeValidation(ref validation, false);
-                ChangeEntries(ref entries, badEntries[4]);
+                status = false;
+                msg += badmsg[4];
             }
 
-            if (entries == "")
-                MessageBox.Show("DATOS INGRESADOS CON EXITO.");
+            if (msg != "")
+                MessageBox.Show(msg);
             else
-                MessageBox.Show(entries);
+                MessageBox.Show("DATOS INGRESADOS CON EXITO.");
 
-            return validation;
-        }
-
-        private void FrmAddProyect_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
+            return status;
         }
     }
 }

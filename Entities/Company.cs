@@ -23,5 +23,15 @@ namespace Entities
         /// Representa los proyectos que tiene la empresa.
         /// </summary>
         public List<Proyect> Proyects { get; set; } = new List<Proyect>();
+
+        public Company() { }
+
+        public Company(string cuil, string nameCom, string adressCom)
+        {
+            CuilCom = int.Parse(cuil);
+            AdressCom = adressCom;
+            NameCom = nameCom;
+
+        }
     }
 }
