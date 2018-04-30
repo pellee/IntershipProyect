@@ -10,7 +10,10 @@ namespace Data
 {
     public class Company
     {
-
+        /// <summary>
+        /// Guarda la empresa en la DB.
+        /// </summary>
+        /// <param name="company">Es la empresa que se quiere guardar en la DB.</param>
         public void CreateCompany(Entities.Company company)
         {
 
@@ -26,6 +29,10 @@ namespace Data
             }
         }
 
+        /// <summary>
+        /// Obtiene todas las empresas que hay en la DB.
+        /// </summary>
+        /// <returns>Devuele una lista con todas las empresas que hay en la DB.</returns>
         public List<Entities.Company> GetAllCompanies()
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnectionSql.CnnString("Pasantia")))

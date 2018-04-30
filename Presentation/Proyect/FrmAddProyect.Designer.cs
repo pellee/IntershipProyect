@@ -46,6 +46,10 @@
             this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
             this.lblSlot = new System.Windows.Forms.Label();
             this.txtSlot = new System.Windows.Forms.TextBox();
+            this.cboxCompanies = new System.Windows.Forms.ComboBox();
+            this.lblCompanies = new System.Windows.Forms.Label();
+            this.btnCreateCom = new System.Windows.Forms.Button();
+            this.btnSelecCom = new System.Windows.Forms.Button();
             this.tlpProyect.SuspendLayout();
             this.tlpProyect2.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +59,7 @@
             this.btnCreateProyect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateProyect.Font = new System.Drawing.Font("Segoe UI Symbol", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateProyect.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnCreateProyect.Location = new System.Drawing.Point(301, 376);
+            this.btnCreateProyect.Location = new System.Drawing.Point(314, 574);
             this.btnCreateProyect.Name = "btnCreateProyect";
             this.btnCreateProyect.Size = new System.Drawing.Size(349, 56);
             this.btnCreateProyect.TabIndex = 0;
@@ -70,7 +74,7 @@
             this.lbData.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lbData.Font = new System.Drawing.Font("Segoe UI Symbol", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbData.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.lbData.Location = new System.Drawing.Point(356, 38);
+            this.lbData.Location = new System.Drawing.Point(356, 48);
             this.lbData.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lbData.Name = "lbData";
             this.lbData.Size = new System.Drawing.Size(239, 37);
@@ -292,12 +296,67 @@
             this.txtSlot.Size = new System.Drawing.Size(174, 33);
             this.txtSlot.TabIndex = 0;
             // 
+            // cboxCompanies
+            // 
+            this.cboxCompanies.BackColor = System.Drawing.Color.DimGray;
+            this.cboxCompanies.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxCompanies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboxCompanies.FormattingEnabled = true;
+            this.cboxCompanies.Location = new System.Drawing.Point(68, 421);
+            this.cboxCompanies.Name = "cboxCompanies";
+            this.cboxCompanies.Size = new System.Drawing.Size(357, 33);
+            this.cboxCompanies.TabIndex = 23;
+            // 
+            // lblCompanies
+            // 
+            this.lblCompanies.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCompanies.AutoSize = true;
+            this.lblCompanies.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblCompanies.Font = new System.Drawing.Font("Segoe UI Symbol", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompanies.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.lblCompanies.Location = new System.Drawing.Point(61, 361);
+            this.lblCompanies.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.lblCompanies.Name = "lblCompanies";
+            this.lblCompanies.Size = new System.Drawing.Size(288, 37);
+            this.lblCompanies.TabIndex = 24;
+            this.lblCompanies.Text = "SELECCIONE EMPRESA";
+            this.lblCompanies.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnCreateCom
+            // 
+            this.btnCreateCom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreateCom.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateCom.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnCreateCom.Location = new System.Drawing.Point(299, 474);
+            this.btnCreateCom.Name = "btnCreateCom";
+            this.btnCreateCom.Size = new System.Drawing.Size(126, 30);
+            this.btnCreateCom.TabIndex = 25;
+            this.btnCreateCom.Text = "CREAR EMPRESA";
+            this.btnCreateCom.UseVisualStyleBackColor = true;
+            // 
+            // btnSelecCom
+            // 
+            this.btnSelecCom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelecCom.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelecCom.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnSelecCom.Location = new System.Drawing.Point(68, 474);
+            this.btnSelecCom.Name = "btnSelecCom";
+            this.btnSelecCom.Size = new System.Drawing.Size(126, 30);
+            this.btnSelecCom.TabIndex = 26;
+            this.btnSelecCom.Text = "SELEC EMPRESA";
+            this.btnSelecCom.UseVisualStyleBackColor = true;
+            this.btnSelecCom.Click += new System.EventHandler(this.btnSelecCom_Click);
+            // 
             // FrmAddProyect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(987, 460);
+            this.ClientSize = new System.Drawing.Size(919, 658);
+            this.Controls.Add(this.btnSelecCom);
+            this.Controls.Add(this.btnCreateCom);
+            this.Controls.Add(this.lblCompanies);
+            this.Controls.Add(this.cboxCompanies);
             this.Controls.Add(this.tlpProyect2);
             this.Controls.Add(this.btnCreateProyect);
             this.Controls.Add(this.lbData);
@@ -335,5 +394,9 @@
         private System.Windows.Forms.TextBox txtSlot;
         private System.Windows.Forms.DateTimePicker dtpEndDate;
         private System.Windows.Forms.DateTimePicker dtpStartDate;
+        private System.Windows.Forms.ComboBox cboxCompanies;
+        private System.Windows.Forms.Label lblCompanies;
+        private System.Windows.Forms.Button btnCreateCom;
+        private System.Windows.Forms.Button btnSelecCom;
     }
 }

@@ -8,6 +8,10 @@ namespace Logic
 {
     public class Company
     {
+        /// <summary>
+        /// Llama a la capa de data para guardar la empresa en la DB.
+        /// </summary>
+        /// <param name="company">Es la empresa que se quiere guardar en la DB.</param>
         public void CreateCompany(Entities.Company company)
         {
             var dataCompany = new Data.Company();
@@ -15,6 +19,10 @@ namespace Logic
             dataCompany.CreateCompany(company);
         }
 
+        /// <summary>
+        /// Llama a la capa de data para obtener todas las empresas que hay en la DB.
+        /// </summary>
+        /// <returns>Devuelve una lista de todas las empresas que hay en la DB.</returns>
         public List<Entities.Company> GetAllCompanies()
         {
             var dataCompany = new Data.Company();

@@ -12,29 +12,29 @@ namespace Presentation
 {
     public partial class FrmAddProyect : Form
     {
+        List<Entities.Company> companies;
+        Entities.Company selectedCom;
+
         public FrmAddProyect()
         {
             InitializeComponent();
+
+            var logCompany = new Logic.Company();
+
+            companies = logCompany.GetAllCompanies();
+
+            WireUp();
         }
 
-        private void btnCreateProyect_Click(object sender, EventArgs e)
+        private void WireUp()
         {
-            if (ValidateForm()) {
-                var logProyect = new Logic.Proyect();
-                var frm = new FrmAddCompany();
+            cboxCompanies.DataSource = null;
 
-                var entProyect = new Entities.Proyect(txtName.Text, txtGoal.Text, txtKindPro.Text, txtHoursPro.Text, dtpStartDate.Text, dtpEndDate.Text, txtSlot.Text);
-
-                logProyect.CreateProyect(entProyect);
-
-                frm.Show();
-                Close();
-            }
-            else
-                FocusAndCleanForm();
+            cboxCompanies.DataSource = companies;
+            cboxCompanies.DisplayMember = "NameCom";
         }
         
-        private void FocusAndCleanForm()
+        private void FocusAndClean()
         {
             txtName.Focus();
 
@@ -82,6 +82,48 @@ namespace Presentation
                 MessageBox.Show("DATOS INGRESADOS CON EXITO.");
 
             return status;
+        }
+
+        private void btnCreateProyect_Click(object sender, EventArgs e)
+        {
+            if (ValidateForm()) {
+                var logProyect = new Logic.Proyect();
+                var entProyect = new Entities.Proyect(txtName.Text, txtGoal.Text, txtKindPro.Text, txtHoursPro.Text, dtpStartDate.Text, dtpEndDate.Text, txtSlot.Text);
+                
+                logProyect.CreateProyect(entProyect, selectedCom.CuilCom);
+
+                companies.Add(selectedCom);
+
+                WireUp();
+            }
+
+            FocusAndClean();
+        }
+
+        private void btnSelecCom_Click(object sender, EventArgs e)
+        {
+
+            if (selectedCom == null) {
+                if (cboxCompanies.SelectedValue != null) {
+                    selectedCom = (Entities.Company)cboxCompanies.SelectedValue;
+
+                    companies.Remove(selectedCom);
+
+                    WireUp(); 
+                }
+            }
+            else {
+                companies.Add(selectedCom);
+
+                selectedCom = (Entities.Company)cboxCompanies.SelectedValue;
+
+                companies.Remove(selectedCom);
+
+                WireUp();
+
+            }
+
+            MessageBox.Show("EMPRESA SELECCIONADA: " + selectedCom.NameCom);
         }
     }
 }
