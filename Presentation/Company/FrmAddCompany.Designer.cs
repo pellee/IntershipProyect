@@ -47,11 +47,11 @@
             this.lblDataCompany.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblDataCompany.Font = new System.Drawing.Font("Segoe UI Symbol", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDataCompany.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.lblDataCompany.Location = new System.Drawing.Point(17, 56);
+            this.lblDataCompany.Location = new System.Drawing.Point(209, 77);
             this.lblDataCompany.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblDataCompany.Name = "lblDataCompany";
             this.lblDataCompany.Size = new System.Drawing.Size(222, 37);
-            this.lblDataCompany.TabIndex = 14;
+            this.lblDataCompany.TabIndex = 0;
             this.lblDataCompany.Text = "DATOS EMPRESA";
             this.lblDataCompany.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -60,10 +60,10 @@
             this.btnCreateCom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateCom.Font = new System.Drawing.Font("Segoe UI Symbol", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateCom.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnCreateCom.Location = new System.Drawing.Point(24, 364);
+            this.btnCreateCom.Location = new System.Drawing.Point(216, 385);
             this.btnCreateCom.Name = "btnCreateCom";
             this.btnCreateCom.Size = new System.Drawing.Size(360, 56);
-            this.btnCreateCom.TabIndex = 13;
+            this.btnCreateCom.TabIndex = 2;
             this.btnCreateCom.Text = "CREAR EMPRESA";
             this.btnCreateCom.UseVisualStyleBackColor = true;
             this.btnCreateCom.Click += new System.EventHandler(this.btnCreateCom_Click);
@@ -79,7 +79,7 @@
             this.tableLayoutPanel1.Controls.Add(this.lblAdressCom, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblNameCom, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblCuilCom, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(24, 123);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(216, 144);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -87,7 +87,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(360, 214);
-            this.tableLayoutPanel1.TabIndex = 12;
+            this.tableLayoutPanel1.TabIndex = 2;
             // 
             // txtAdressCom
             // 
@@ -96,7 +96,7 @@
             this.txtAdressCom.Location = new System.Drawing.Point(183, 167);
             this.txtAdressCom.Name = "txtAdressCom";
             this.txtAdressCom.Size = new System.Drawing.Size(174, 22);
-            this.txtAdressCom.TabIndex = 6;
+            this.txtAdressCom.TabIndex = 3;
             // 
             // txtNameCom
             // 
@@ -105,7 +105,7 @@
             this.txtNameCom.Location = new System.Drawing.Point(183, 95);
             this.txtNameCom.Name = "txtNameCom";
             this.txtNameCom.Size = new System.Drawing.Size(174, 22);
-            this.txtNameCom.TabIndex = 4;
+            this.txtNameCom.TabIndex = 2;
             // 
             // txtCuilCom
             // 
@@ -114,7 +114,7 @@
             this.txtCuilCom.Location = new System.Drawing.Point(183, 24);
             this.txtCuilCom.Name = "txtCuilCom";
             this.txtCuilCom.Size = new System.Drawing.Size(174, 22);
-            this.txtCuilCom.TabIndex = 2;
+            this.txtCuilCom.TabIndex = 1;
             // 
             // lblAdressCom
             // 
@@ -127,7 +127,7 @@
             this.lblAdressCom.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblAdressCom.Name = "lblAdressCom";
             this.lblAdressCom.Size = new System.Drawing.Size(164, 21);
-            this.lblAdressCom.TabIndex = 3;
+            this.lblAdressCom.TabIndex = 1;
             this.lblAdressCom.Text = "DIRECCION:";
             this.lblAdressCom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -142,7 +142,7 @@
             this.lblNameCom.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblNameCom.Name = "lblNameCom";
             this.lblNameCom.Size = new System.Drawing.Size(164, 21);
-            this.lblNameCom.TabIndex = 1;
+            this.lblNameCom.TabIndex = 0;
             this.lblNameCom.Text = "NOMBRE EMPRESA:";
             this.lblNameCom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
