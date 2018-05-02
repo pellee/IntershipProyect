@@ -32,25 +32,5 @@ namespace Logic
             return dataProyect.GetAllProyects();
         }
 
-        /// <summary>
-        /// Verifica si el proyecto ya existe.
-        /// </summary>
-        /// <param name="proyect">Es el proyecto que se quiere verificar.</param>
-        /// <returns>false si el proyecto existe, true si no existe. </returns>
-        public bool ValidateProyect(Entities.Proyect proyect)
-        {
-            //TODO - Fijarme como verificar si existe el proyecto.
-
-            var dataProyect = new Data.Proyect();
-            var proyects = dataProyect.GetAllProyects();
-
-            foreach (var p in proyects) {
-                if (p == proyect)
-                    return false;
-            }
-
-            return true;
-        }
-
     }
 }

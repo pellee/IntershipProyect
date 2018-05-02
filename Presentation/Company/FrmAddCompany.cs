@@ -50,23 +50,6 @@ namespace Presentation
             return status;
         }
 
-        private bool ValidateCompany()
-        {
-            var logCompany = new Logic.Company();
-            var entCompany = new Entities.Company(txtCuilCom.Text, txtNameCom.Text, txtAdressCom.Text);
-            var companies = logCompany.GetAllCompanies();
-
-            foreach (var c in companies) {
-                if (c.CuilCom == entCompany.CuilCom) {
-                    MessageBox.Show("LA EMPRESA YA FUE CREADA.");
-
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
         private void FocusAndClean()
         {
             txtCuilCom.Focus();
@@ -78,21 +61,22 @@ namespace Presentation
         private void btnCreateCom_Click(object sender, EventArgs e)
         {
             if (ValidateForm()) {
-                if (ValidateCompany()) {
+                var logCompany = new Logic.Company();
+                var entCompany = new Entities.Company(txtCuilCom.Text, txtNameCom.Text, txtAdressCom.Text);
 
-                    var logCompany = new Logic.Company();
-                    var entCompany = new Entities.Company(txtCuilCom.Text, txtNameCom.Text, txtAdressCom.Text);
-
+                if (logCompany.ValidateCompany(entCompany)) {
                     try {
                         logCompany.CreateCompany(entCompany);
                     } catch (Exception ex) {
                         MessageBox.Show(ex.Message);
                     }
 
-                    MessageBox.Show("EMPRESA CREADA CON EXITO.");
-
-                    FocusAndClean();
+                    MessageBox.Show("EMPRESA CREADA CON EXITO."); 
                 }
+                else
+                    MessageBox.Show("LA EMPRESA YA A SIDO CREADA.");
+
+                FocusAndClean();
             }
         }
     }

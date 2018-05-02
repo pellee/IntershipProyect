@@ -29,5 +29,22 @@ namespace Logic
 
             return dataCompany.GetAllCompanies();
         }
+
+        /// <summary>
+        /// Valida que la empresa no se cree de nuevo.
+        /// </summary>
+        /// <param name="company">es la empresa que se queire validar.</param>
+        /// <returns>Devuelve true si la empresa no se creo. Devulve false si la empresa ya existe.</returns>
+        public bool ValidateCompany(Entities.Company company)
+        {
+            var companies = GetAllCompanies();
+
+            foreach (var c in companies) {
+                if (c.CuilCom == company.CuilCom)
+                    return false;
+            }
+
+            return true;
+        }
     }
 }

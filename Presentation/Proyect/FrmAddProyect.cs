@@ -89,8 +89,12 @@ namespace Presentation
             if (ValidateForm()) {
                 var logProyect = new Logic.Proyect();
                 var entProyect = new Entities.Proyect(txtName.Text, txtGoal.Text, txtKindPro.Text, txtHoursPro.Text, dtpStartDate.Text, dtpEndDate.Text, txtSlot.Text);
-                
-                logProyect.CreateProyect(entProyect, selectedCom.CuilCom);
+
+                try {
+                    logProyect.CreateProyect(entProyect, selectedCom.CuilCom);
+                } catch (Exception ex) {
+                    MessageBox.Show(ex.Message);
+                }
 
                 companies.Add(selectedCom);
 

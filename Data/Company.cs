@@ -16,7 +16,6 @@ namespace Data
         /// <param name="company">Es la empresa que se quiere guardar en la DB.</param>
         public void CreateCompany(Entities.Company company)
         {
-
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnectionSql.CnnString("Pasantia")))
             {
                 var parameters = new DynamicParameters();

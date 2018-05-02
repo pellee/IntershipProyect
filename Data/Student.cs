@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Dapper;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,5 +10,64 @@ namespace Data
 {
     public class Student
     {
+        public void CreatePerson(string dni, string fname, string lname)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnectionSql.CnnString("Pasantia")))
+            {
+                var parameters = new DynamicParameters();
+
+                parameters.Add("@Dni", dni);
+                parameters.Add("@FirstName", fname);
+                parameters.Add("@LastName", lname);
+
+                connection.Execute("dbo.spPerson_Insert", parameters, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public int CreateStudent(double prom, string dni)
+        {
+            int idstudent = 0;
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnectionSql.CnnString("Pasantia")))
+            {
+                var parameters = new DynamicParameters();
+
+                parameters.Add("@Prom", prom);
+                parameters.Add("@IdPerson", dni);
+                parameters.Add("@IdStudent", idstudent, dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+                connection.Execute("dbo.spStudent_Insert", parameters, commandType: CommandType.StoredProcedure);
+
+                idstudent = parameters.Get<int>("@IdStudent");
+            }
+
+            return idstudent;
+        }
+
+        public void CreatePreferenceStudent(string preference, int idstudent)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnectionSql.CnnString("Pasantia")))
+            {
+                var parameters = new DynamicParameters();
+
+                parameters.Add("@Preference", preference);
+                parameters.Add("@IdStudent", idstudent);
+
+                connection.Execute("dbo.spPreference_Insert", parameters, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        /*public List<Entities.Person> GetAllStudent()
+        {
+            var persons = new List<Entities.Person>();
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnectionSql.CnnString("Pasantia")))
+            {
+                persons = connection.Query<Entities.Person>("dbo.spPerson_GetPersons", commandType: CommandType.StoredProcedure).ToList();
+
+                return persons;
+            }
+
+        }*/
     }
 }
