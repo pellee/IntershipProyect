@@ -34,17 +34,16 @@ namespace Logic
 
             CreatePreferenceStudent(student, idstudent);
         }
-
-        /*public List<Entities.Person> GetAllStudents()
+        private List<Entities.Person> GetAllPersons()
         {
             var dataStudent = new Data.Student();
 
-            return dataStudent.GetAllStudent();
+            return dataStudent.GetAllPersons();
         }
 
         public bool ValidatePerson(string dni)
         {
-            var persons = GetAllStudents();
+            var persons = GetAllPersons();
 
             foreach (var p in persons) {
                 if (p.Dni == dni)
@@ -52,6 +51,6 @@ namespace Logic
             }
 
             return false;
-        }*/
+        }
     }
 }

@@ -56,18 +56,16 @@ namespace Data
                 connection.Execute("dbo.spPreference_Insert", parameters, commandType: CommandType.StoredProcedure);
             }
         }
-
-        /*public List<Entities.Person> GetAllStudent()
+        public List<Entities.Person> GetAllPersons()
         {
-            var persons = new List<Entities.Person>();
 
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnectionSql.CnnString("Pasantia")))
             {
-                persons = connection.Query<Entities.Person>("dbo.spPerson_GetPersons", commandType: CommandType.StoredProcedure).ToList();
+                var persons = connection.Query<Entities.Person>("dbo.spPerson_GetPersons", commandType: CommandType.StoredProcedure).ToList();
 
                 return persons;
             }
 
-        }*/
+        }
     }
 }

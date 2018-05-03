@@ -76,6 +76,7 @@ namespace Presentation
             txtLastName.ResetText();
             txtName.ResetText();
             txtProm.ResetText();
+            lstboxPreferences.Items.Clear();
         }
 
         private void btnAddPreference_Click(object sender, EventArgs e)
@@ -93,7 +94,7 @@ namespace Presentation
             if (ValidateForm()) {
                 var logStudent = new Logic.Student();
 
-                //if (logStudent.ValidatePerson(txtDni.Text)) {
+                if (!logStudent.ValidatePerson(txtDni.Text)) {
                     var entStudent = new Entities.Student(txtDni.Text, txtName.Text, txtLastName.Text, txtProm.Text, preferences);
 
                     try {
@@ -101,12 +102,12 @@ namespace Presentation
                     } catch (Exception ex) {
                         MessageBox.Show(ex.Message);
                     }
-
-                CleanAndFocus();
-               // }
-                //else
-                    //MessageBox.Show("LA PERSONA YA EXISTE.");
+                }
+                else
+                    MessageBox.Show("LA PERSONA YA EXISTE.");
             }
+
+            CleanAndFocus();
         }
     }
 }

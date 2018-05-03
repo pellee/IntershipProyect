@@ -24,6 +24,8 @@ namespace Entities
         /// </summary>
         public string LastName { get; set; }
 
+        public Person() {}
+
         public Person(string dni, string fname, string lname)
         {
             Dni = dni;

@@ -19,7 +19,10 @@ namespace Data
         /// </summary>
         /// <param name="cnnName">El nombre para encontrar la DB.</param>
         /// <returns>La connectionString.</returns>
-        public static string CnnString(string cnnName) { return ConfigurationManager.ConnectionStrings[cnnName].ConnectionString; }
+        public static string CnnString(string cnnName)
+        {
+            return ConfigurationManager.ConnectionStrings[cnnName].ConnectionString;
+        }
     }
 
 }

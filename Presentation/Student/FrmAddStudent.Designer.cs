@@ -33,12 +33,12 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txtDni = new System.Windows.Forms.TextBox();
             this.lblDni = new System.Windows.Forms.Label();
-            this.lblPreference = new System.Windows.Forms.Label();
-            this.txtPreference = new System.Windows.Forms.TextBox();
             this.lblProm = new System.Windows.Forms.Label();
             this.txtProm = new System.Windows.Forms.TextBox();
             this.lblLastName = new System.Windows.Forms.Label();
             this.txtLastName = new System.Windows.Forms.TextBox();
+            this.lblPreference = new System.Windows.Forms.Label();
+            this.txtPreference = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lstboxPreferences = new System.Windows.Forms.ListBox();
             this.lblPreferences = new System.Windows.Forms.Label();
@@ -122,31 +122,6 @@
             this.lblDni.Text = "DNI:";
             this.lblDni.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblPreference
-            // 
-            this.lblPreference.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPreference.AutoSize = true;
-            this.lblPreference.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblPreference.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPreference.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.lblPreference.Location = new System.Drawing.Point(28, 95);
-            this.lblPreference.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.lblPreference.Name = "lblPreference";
-            this.lblPreference.Size = new System.Drawing.Size(87, 17);
-            this.lblPreference.TabIndex = 0;
-            this.lblPreference.Text = "PREFERENCIA";
-            this.lblPreference.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtPreference
-            // 
-            this.txtPreference.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPreference.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtPreference.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPreference.Location = new System.Drawing.Point(31, 124);
-            this.txtPreference.Name = "txtPreference";
-            this.txtPreference.Size = new System.Drawing.Size(122, 29);
-            this.txtPreference.TabIndex = 1;
-            // 
             // lblProm
             // 
             this.lblProm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -194,6 +169,31 @@
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(174, 43);
             this.txtLastName.TabIndex = 6;
+            // 
+            // lblPreference
+            // 
+            this.lblPreference.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPreference.AutoSize = true;
+            this.lblPreference.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblPreference.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPreference.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.lblPreference.Location = new System.Drawing.Point(28, 95);
+            this.lblPreference.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.lblPreference.Name = "lblPreference";
+            this.lblPreference.Size = new System.Drawing.Size(87, 17);
+            this.lblPreference.TabIndex = 0;
+            this.lblPreference.Text = "PREFERENCIA";
+            this.lblPreference.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtPreference
+            // 
+            this.txtPreference.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPreference.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtPreference.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPreference.Location = new System.Drawing.Point(31, 124);
+            this.txtPreference.Name = "txtPreference";
+            this.txtPreference.Size = new System.Drawing.Size(122, 29);
+            this.txtPreference.TabIndex = 1;
             // 
             // label1
             // 
