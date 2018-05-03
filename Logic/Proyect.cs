@@ -10,14 +10,15 @@ namespace Logic
     public class Proyect
     {
         /// <summary>
-        /// Llama a la capa de Data para crear y guardar el proyecto en la DB.
+        /// Llama a la capa de data para guardar el proyecto en la DB.
         /// </summary>
-        /// <param name="proyect">Es el objeto que contiene los datos del proyecto.</param>
-        public void CreateProyect(Entities.Proyect proyect)
+        /// <param name="proyect">Contiene todos los valores del proyecto.</param>
+        /// <param name="cuil">Es la referencia a la empresa que pertenece el proyecto.</param>
+        public void CreateProyect(Entities.Proyect proyect, int cuil)
         {
             Data.Proyect dataProyect = new Data.Proyect();
 
-            dataProyect.CreateProyect(proyect);
+            dataProyect.CreateProyect(proyect, cuil);
         }
 
         /// <summary>

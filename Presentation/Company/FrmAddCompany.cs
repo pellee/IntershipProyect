@@ -12,75 +12,72 @@ namespace Presentation
 {
     public partial class FrmAddCompany : Form
     {
-        List<Entities.Proyect> proyects4ComboBox;
-        List<Entities.Proyect> proyects4ListBox = new List<Entities.Proyect>();
-
         public FrmAddCompany()
         {
-            var logProyect = new Logic.Proyect();
-
             InitializeComponent();
-
-            proyects4ComboBox = logProyect.GetAllProyects();
-
-            WireUp();
         }
 
-        private void WireUp()
+        private bool ValidateForm()
         {
+            bool status = true;
 
-            cboxProyects.DataSource = null;
+            string msg = "";
+            string[] badmsg = new string[] { "No ingreso cuil\n", "No ingrese nombre\n", "Nom ingreso direccion" };
 
-            cboxProyects.DataSource = proyects4ComboBox;
-            cboxProyects.DisplayMember = "NamePro";
+            if (txtCuilCom.Text.Length == 0) {
+                status = false;
 
-            lstboxProyects.DataSource = null;
-
-            lstboxProyects.DataSource = proyects4ListBox;
-            lstboxProyects.DisplayMember = "NamePro";
-        }
-
-        private void btnCreateProyect_Click(object sender, EventArgs e)
-        {
-            FrmAddProyect frmProyect = new FrmAddProyect();
-
-            frmProyect.Show();
-            Hide();
-        }
-
-        private void FrmAddCompany_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnAddProyect_Click(object sender, EventArgs e)
-        {
-            var p = (Entities.Proyect)cboxProyects.SelectedItem;
-
-            if (p != null) {
-
-                proyects4ComboBox.Remove(p);
-                proyects4ListBox.Add(p);
-
-                WireUp();
+                msg += badmsg[0];
             }
+
+            if (txtNameCom.Text.Length == 0) {
+                status = false;
+
+                msg += badmsg[1];
+            }
+
+            if (txtAdressCom.Text.Length == 0) {
+                status = false;
+
+                msg += badmsg[2];
+            }
+
+            if(msg != "")
+                MessageBox.Show(msg);
             else
-                MessageBox.Show("TIENE QUE SELECCIONAR UNO DE LOS ITEMS");
+                MessageBox.Show("DATOS INGRESADO CON EXITO.");
+
+            return status;
         }
 
-        private void btnRemove_Click(object sender, EventArgs e)
+        private void FocusAndClean()
         {
-            var p = (Entities.Proyect)lstboxProyects.SelectedItem;
+            txtCuilCom.Focus();
+            txtCuilCom.ResetText();
+            txtNameCom.ResetText();
+            txtAdressCom.ResetText();
+        }
 
-            if (p != null){
+        private void btnCreateCom_Click(object sender, EventArgs e)
+        {
+            if (ValidateForm()) {
+                var logCompany = new Logic.Company();
+                var entCompany = new Entities.Company(txtCuilCom.Text, txtNameCom.Text, txtAdressCom.Text);
 
-                proyects4ListBox.Remove(p);
-                proyects4ComboBox.Add(p);
+                if (logCompany.ValidateCompany(entCompany)) {
+                    try {
+                        logCompany.CreateCompany(entCompany);
+                    } catch (Exception ex) {
+                        MessageBox.Show(ex.Message);
+                    }
 
-                WireUp();
+                    MessageBox.Show("EMPRESA CREADA CON EXITO."); 
+                }
+                else
+                    MessageBox.Show("LA EMPRESA YA A SIDO CREADA.");
+
+                FocusAndClean();
             }
-            else
-                MessageBox.Show("TIENE QUE SELECCIONAR UNO DE LOS ITEMS");
         }
     }
 }

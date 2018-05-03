@@ -12,36 +12,32 @@ namespace Presentation
 {
     public partial class FrmAddProyect : Form
     {
+        List<Entities.Company> companies;
+        Entities.Company selectedCom;
+
         public FrmAddProyect()
         {
             InitializeComponent();
+
+            var logCompany = new Logic.Company();
+
+            companies = logCompany.GetAllCompanies();
+
+            WireUp();
         }
 
-        private void btnCreateProyect_Click(object sender, EventArgs e)
+        private void WireUp()
         {
-            if (ValidateForm()) {
+            cboxCompanies.DataSource = null;
 
-                try {
-                    var logProyect = new Logic.Proyect();
-                    var entProyect = new Entities.Proyect(txtName.Text, txtGoal.Text, txtKindPro.Text, txtHoursPro.Text, dtpStartDate.Text, dtpEndDate.Text, txtSlot.Text);
-
-                    FocusAndCleanForm();
-
-                    logProyect.CreateProyect(entProyect);
-                }
-                catch (Exception ex) {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-
-            FrmMainMenu frmMainMenu = new FrmMainMenu();
-            frmMainMenu.Show();
-            Hide();
+            cboxCompanies.DataSource = companies;
+            cboxCompanies.DisplayMember = "NameCom";
         }
         
-        private void FocusAndCleanForm()
+        private void FocusAndClean()
         {
             txtName.Focus();
+
             txtName.ResetText();
             txtGoal.ResetText();
             txtHoursPro.ResetText();
@@ -49,58 +45,89 @@ namespace Presentation
             txtSlot.ResetText();
         }
 
-        private void ChangeValidation(ref bool validation, bool value)
-        {
-            validation = value;
-        }
-
-        private void ChangeEntries(ref string entries, string value)
-        {
-            entries += (value + "\n");
-        }
-
         private bool ValidateForm()
         {
-            bool validation = true;
-            string[] badEntries = new string[5] { "Nombre mal ingresado", "objetivo mal ingresado", "tipo pro mal ingresado", "horas pro mal ingresado", "vacante mal ingresado" };
-            string entries = "";
+            bool status = true;
+            string[] badmsg = new string[5] { "Nombre mal ingresado", "objetivo mal ingresado", "tipo pro mal ingresado", "horas pro mal ingresado", "vacante mal ingresado" };
+            string msg = "";
 
             if(txtName.Text.Length == 0) {
-                ChangeValidation(ref validation, false);
-                ChangeEntries(ref entries, badEntries[0]);
+                status = false;
+                msg += badmsg[0];
             }
 
             if(txtGoal.Text.Length == 0) {
-                ChangeValidation(ref validation, false);
-                ChangeEntries(ref entries, badEntries[1]);
+                status = false;
+                msg += badmsg[1];
             }
 
             if(txtKindPro.Text.Length == 0) {
-                ChangeValidation(ref validation, false);
-                ChangeEntries(ref entries, badEntries[2]);
+                status = false;
+                msg += badmsg[2];
             }
 
             if(txtHoursPro.Text.Length == 0) {
-                ChangeValidation(ref validation, false);
-                ChangeEntries(ref entries, badEntries[3]);
+                status = false;
+                msg += badmsg[3];
             }
 
             if (!int.TryParse(txtSlot.Text, out int a)) {
-                ChangeValidation(ref validation, false);
-                ChangeEntries(ref entries, badEntries[4]);
+                status = false;
+                msg += badmsg[4];
             }
 
-            if (entries == "")
-                MessageBox.Show("DATOS INGRESADOS CON EXITO.");
+            if (msg != "")
+                MessageBox.Show(msg);
             else
-                MessageBox.Show(entries);
+                MessageBox.Show("DATOS INGRESADOS CON EXITO.");
 
-            return validation;
+            return status;
         }
 
-        private void FrmAddProyect_FormClosed(object sender, FormClosedEventArgs e)
+        private void btnCreateProyect_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (ValidateForm()) {
+                var logProyect = new Logic.Proyect();
+                var entProyect = new Entities.Proyect(txtName.Text, txtGoal.Text, txtKindPro.Text, txtHoursPro.Text, dtpStartDate.Text, dtpEndDate.Text, txtSlot.Text);
+
+                try {
+                    logProyect.CreateProyect(entProyect, selectedCom.CuilCom);
+                } catch (Exception ex) {
+                    MessageBox.Show(ex.Message);
+                }
+
+                companies.Add(selectedCom);
+
+                WireUp();
+            }
+
+            FocusAndClean();
+        }
+
+        private void btnSelecCom_Click(object sender, EventArgs e)
+        {
+
+            if (selectedCom == null) {
+                if (cboxCompanies.SelectedValue != null) {
+                    selectedCom = (Entities.Company)cboxCompanies.SelectedValue;
+
+                    companies.Remove(selectedCom);
+
+                    WireUp(); 
+                }
+            }
+            else {
+                companies.Add(selectedCom);
+
+                selectedCom = (Entities.Company)cboxCompanies.SelectedValue;
+
+                companies.Remove(selectedCom);
+
+                WireUp();
+
+            }
+
+            MessageBox.Show("EMPRESA SELECCIONADA: " + selectedCom.NameCom);
         }
     }
 }

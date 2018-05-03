@@ -11,21 +11,7 @@ namespace Entities
     /// </summary>
     public class Proyect
     {
-
-        public Proyect() { }
-
-        public Proyect(string namePro, string goalPro, string kindPro, string hoursPro, string startDatePro, string endDatePro, string slots)
-        {
-            NamePro = namePro;
-            GoalPro = goalPro;
-            KindPro = kindPro;
-            HoursPro = hoursPro;
-            Status = true;
-            StartDatePro = DateTime.Parse(startDatePro);
-            EndDatePro = DateTime.Parse(endDatePro);
-            Slots = int.Parse(slots);
-        }
-
+        public int Id { get; set; }
         /// <summary>
         /// Representa el nombre del proyecto.
         /// </summary>
@@ -43,10 +29,6 @@ namespace Entities
         /// </summary>
         public string HoursPro { get; set; }
         /// <summary>
-        /// Representa el status del proyecto.
-        /// </summary>
-        public bool Status { get; set; }
-        /// <summary>
         /// Representa la fecha de inicio del proyecto.
         /// </summary>
         public DateTime StartDatePro { get; set; }
@@ -58,6 +40,20 @@ namespace Entities
         /// Representa la cantidad de vacantes disponibles del proyecto.
         /// </summary>
         public int Slots { get; set; }
+
+        public Proyect() { }
+
+        public Proyect(string namePro, string goalPro, string kindPro, string hoursPro, string startDatePro, string endDatePro, string slots)
+        {
+            NamePro = namePro;
+            GoalPro = goalPro;
+            KindPro = kindPro;
+            HoursPro = hoursPro;
+            StartDatePro = DateTime.Parse(startDatePro);
+            EndDatePro = DateTime.Parse(endDatePro);
+            Slots = int.Parse(slots);
+        }
+
 
     }
 }
