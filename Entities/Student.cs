@@ -16,6 +16,8 @@ namespace Entities
         /// </summary>
         public List<string> Preferences { get; set; } = new List<string>();
 
+        public Student() { }
+
         public Student(string dni, string fname, string lname, string prom, List<string> preferences): base (dni, fname, lname)
         {
             Prom = double.Parse(prom);

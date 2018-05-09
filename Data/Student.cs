@@ -86,5 +86,23 @@ namespace Data
             }
 
         }
+
+        private void GetPreferencesStudent(List<Entities.Student> students, IDbConnection connection)
+        {
+            foreach (var s in students)
+                s.Preferences = connection.Query<string>("dbo.spStudent_GetPreferences", commandType: CommandType.StoredProcedure).ToList();
+        }
+
+        public List<Entities.Student> GetAllStudents()
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnectionSql.CnnString("Pasantia")))
+            {
+                var students = connection.Query<Entities.Student>("dbo.spStudent_GetStudents", commandType: CommandType.StoredProcedure).ToList();
+
+                GetPreferencesStudent(students, connection);
+
+                return students;
+            }
+        }
     }
 }

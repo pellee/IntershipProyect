@@ -71,5 +71,13 @@ namespace Logic
 
             return false;
         }
+
+        public List<Entities.Student> OrderByProm()
+        {
+            var dataStudent = new Data.Student();
+            var students = dataStudent.GetAllStudents();
+
+            return students;
+        }
     }
 }
