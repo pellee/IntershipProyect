@@ -19,3 +19,4 @@ C:\Users\Pelle\source\repos\IntershipProyect\Presentation\bin\Debug\Logic.pdb
 C:\Users\Pelle\source\repos\IntershipProyect\Presentation\bin\Debug\Data.pdb
 C:\Users\Pelle\source\repos\IntershipProyect\Presentation\bin\Debug\Dapper.xml
 C:\Users\Pelle\source\repos\IntershipProyect\Presentation\obj\Debug\Presentation.csproj.CopyComplete
+C:\Users\Pelle\source\repos\IntershipProyect\Presentation\obj\Debug\Presentation.FrmMenu.resources

@@ -12,9 +12,18 @@ namespace Presentation
 {
     public partial class FrmAddCompany : Form
     {
+        ICompanyRequester frmRequester;
+
         public FrmAddCompany()
         {
             InitializeComponent();
+        }
+
+        public FrmAddCompany(ICompanyRequester requester)
+        {
+            InitializeComponent();
+
+            frmRequester = requester;
         }
 
         private bool ValidateForm()
@@ -71,12 +80,17 @@ namespace Presentation
                         MessageBox.Show(ex.Message);
                     }
 
-                    MessageBox.Show("EMPRESA CREADA CON EXITO."); 
+                    MessageBox.Show("EMPRESA CREADA CON EXITO.");
+
+                    frmRequester.CreateCompany(entCompany);
+
+                    this.Close();
                 }
-                else
+                else {
                     MessageBox.Show("LA EMPRESA YA A SIDO CREADA.");
 
-                FocusAndClean();
+                    FocusAndClean();
+                }
             }
         }
     }

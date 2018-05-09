@@ -51,6 +51,13 @@
     <Compile Include="Company\FrmAddCompany.Designer.cs">
       <DependentUpon>FrmAddCompany.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ICompanyRequester.cs" />
     <Compile Include="Proyect\FrmAddProyect.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Company\FrmAddCompany.resx">
       <DependentUpon>FrmAddCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Proyect\FrmAddProyect.resx">
       <DependentUpon>FrmAddProyect.cs</DependentUpon>

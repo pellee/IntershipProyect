@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entities;
 
 namespace Presentation
 {
-    public partial class FrmAddProyect : Form
+    public partial class FrmAddProyect : Form, ICompanyRequester
     {
         List<Entities.Company> companies;
         Entities.Company selectedCom;
@@ -86,7 +87,8 @@ namespace Presentation
 
         private void btnCreateProyect_Click(object sender, EventArgs e)
         {
-            if (ValidateForm()) {
+            if (ValidateForm())
+            {
                 var logProyect = new Logic.Proyect();
                 var entProyect = new Entities.Proyect(txtName.Text, txtGoal.Text, txtKindPro.Text, txtHoursPro.Text, dtpStartDate.Text, dtpEndDate.Text, txtSlot.Text);
 
@@ -99,9 +101,14 @@ namespace Presentation
                 companies.Add(selectedCom);
 
                 WireUp();
-            }
 
-            FocusAndClean();
+                this.Close();
+            }
+            else {
+                FocusAndClean();
+
+                WireUp();
+            }
         }
 
         private void btnSelecCom_Click(object sender, EventArgs e)
@@ -128,6 +135,20 @@ namespace Presentation
             }
 
             MessageBox.Show("EMPRESA SELECCIONADA: " + selectedCom.NameCom);
+        }
+
+        private void btnCreateCom_Click(object sender, EventArgs e)
+        {
+            var frm = new FrmAddCompany(this);
+
+            frm.Show();
+        }
+
+        public void CreateCompany(Company company)
+        {
+            companies.Add(company);
+
+            WireUp();
         }
     }
 }

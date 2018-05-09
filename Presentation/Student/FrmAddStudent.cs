@@ -102,12 +102,15 @@ namespace Presentation
                     } catch (Exception ex) {
                         MessageBox.Show(ex.Message);
                     }
-                }
-                else
-                    MessageBox.Show("LA PERSONA YA EXISTE.");
-            }
 
-            CleanAndFocus();
+                    this.Close();
+                }
+                else {
+                    MessageBox.Show("LA PERSONA YA EXISTE.");
+
+                    CleanAndFocus();
+                }
+            }
         }
     }
 }

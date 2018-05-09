@@ -333,6 +333,7 @@
             this.btnCreateCom.TabIndex = 25;
             this.btnCreateCom.Text = "CREAR EMPRESA";
             this.btnCreateCom.UseVisualStyleBackColor = true;
+            this.btnCreateCom.Click += new System.EventHandler(this.btnCreateCom_Click);
             // 
             // btnSelecCom
             // 
