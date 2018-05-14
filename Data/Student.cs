@@ -93,8 +93,13 @@ namespace Data
         /// <param name="connection">variable para ejectar el procedimiento de la DB.</param>
         private void GetPreferencesStudent(List<Entities.Student> students, IDbConnection connection)
         {
-            foreach (var s in students)
-                s.Preferences = connection.Query<string>("dbo.spStudent_GetPreferences", commandType: CommandType.StoredProcedure).ToList();
+            foreach (var s in students) {
+                var parameters = new DynamicParameters();
+
+                parameters.Add("@IdStudent", s.IdStudent);
+
+                s.Preferences = connection.Query<string>("dbo.spStudent_GetPreferences", parameters, commandType: CommandType.StoredProcedure).ToList();
+            }
         }
         /// <summary>
         /// Trae todos los alumnos de la DB.

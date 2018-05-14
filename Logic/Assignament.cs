@@ -17,6 +17,8 @@ namespace Logic
             var students = logStu.GetAllStudents();
             var companies = logCom.GetAllCompanies();
 
+            // TODO - arreglar cuando traigo las preferencias del 
+
             foreach (var s in students) {
                 foreach (var pr in s.Preferences) {
                     foreach (var c in companies) {
