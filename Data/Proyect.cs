@@ -33,7 +33,6 @@ namespace Data
                 connection.Execute("dbo.spProyects_Insert", parameters, commandType: CommandType.StoredProcedure);
             }
         }
-
         /// <summary>
         /// Obtiene todos los proyectos que hay en la DB.
         /// </summary>
@@ -46,6 +45,24 @@ namespace Data
 
                 return proyects;
             }
+        }
+        /// <summary>
+        /// Cambia el valor de un proyecto en especial.
+        /// </summary>
+        /// <param name="idProyect">Proyecto que se quiere cambiar.</param>
+        /// <param name="slots">data que se quiere cambiar.</param>
+        public void UpdateProyect(int idProyect, int slots)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnectionSql.CnnString("Pasantia")))
+            {
+                var parameters = new DynamicParameters();
+
+                parameters.Add("@IdProyect", idProyect);
+                parameters.Add("@Slots", slots);
+
+                connection.Execute("dbo.spProyect_UpdateProyect", parameters, commandType: CommandType.StoredProcedure);
+            }
+
         }
     }
 }

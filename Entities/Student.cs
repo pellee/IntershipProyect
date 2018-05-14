@@ -7,6 +7,7 @@ namespace Entities
     /// </summary>
     public class Student : Person
     {
+        public int IdStudent { get; set; }
         /// <summary>
         /// El promedio del alumno.
         /// </summary>
@@ -16,12 +17,15 @@ namespace Entities
         /// </summary>
         public List<string> Preferences { get; set; } = new List<string>();
 
+        public bool Assigned { get; set; }
+
         public Student() { }
 
         public Student(string dni, string fname, string lname, string prom, List<string> preferences): base (dni, fname, lname)
         {
             Prom = double.Parse(prom);
             Preferences = preferences;
+            Assigned = false;
         }
     }
 }

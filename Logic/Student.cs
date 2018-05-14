@@ -41,7 +41,7 @@ namespace Logic
 
             CreatePerson(student);
 
-            idstudent = dataStudent.CreateStudent(student.Prom, student.Dni);
+            idstudent = dataStudent.CreateStudent(student.Prom, student.Dni, student.Assigned);
 
             CreatePreferenceStudent(student, idstudent);
         }
@@ -71,13 +71,23 @@ namespace Logic
 
             return false;
         }
-
-        public List<Entities.Student> OrderByProm()
+        /// <summary>
+        /// Obtiene todos los alumnos ordenados de mayor a menor.
+        /// </summary>
+        /// <returns>Retorna una lista ordenada de mayor a menor.</returns>
+        public List<Entities.Student> GetAllStudents()
         {
             var dataStudent = new Data.Student();
             var students = dataStudent.GetAllStudents();
 
             return students;
+        }
+
+        public void UpdateStudent(Entities.Student student)
+        {
+            var dataStu = new Data.Student();
+
+            dataStu.UpdateStudent(student.Assigned, student.Dni);
         }
     }
 }

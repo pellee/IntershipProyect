@@ -37,5 +37,12 @@ namespace Presentation
 
             frm.Show();
         }
+
+        private void btnAssignaments_Click(object sender, EventArgs e)
+        {
+            var frm = new FrmAssignaments();
+
+            frm.Show();
+        }
     }
 }

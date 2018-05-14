@@ -32,5 +32,12 @@ namespace Logic
             return dataProyect.GetAllProyects();
         }
 
+        public void UpdateProyect(Entities.Proyect proyect)
+        {
+            var dataPro = new Data.Proyect();
+
+            dataPro.UpdateProyect(proyect.IdProyect, proyect.Slots);
+        }
+
     }
 }

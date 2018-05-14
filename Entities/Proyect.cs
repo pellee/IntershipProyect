@@ -11,7 +11,7 @@ namespace Entities
     /// </summary>
     public class Proyect
     {
-        public int Id { get; set; }
+        public int IdProyect { get; set; }
         /// <summary>
         /// Representa el nombre del proyecto.
         /// </summary>

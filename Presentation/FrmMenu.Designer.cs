@@ -30,8 +30,9 @@
         {
             this.btnCompany = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnProyect = new System.Windows.Forms.Button();
             this.btnStudent = new System.Windows.Forms.Button();
+            this.btnProyect = new System.Windows.Forms.Button();
+            this.btnAssignaments = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +43,7 @@
             this.btnCompany.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompany.Font = new System.Drawing.Font("Segoe UI Symbol", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCompany.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnCompany.Location = new System.Drawing.Point(3, 18);
+            this.btnCompany.Location = new System.Drawing.Point(3, 7);
             this.btnCompany.Name = "btnCompany";
             this.btnCompany.Size = new System.Drawing.Size(618, 56);
             this.btnCompany.TabIndex = 4;
@@ -55,32 +56,20 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.btnAssignaments, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnStudent, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnProyect, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnCompany, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(27, 72);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(30, 123);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(624, 280);
             this.tableLayoutPanel1.TabIndex = 5;
-            // 
-            // btnProyect
-            // 
-            this.btnProyect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.SetColumnSpan(this.btnProyect, 2);
-            this.btnProyect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProyect.Font = new System.Drawing.Font("Segoe UI Symbol", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProyect.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnProyect.Location = new System.Drawing.Point(3, 113);
-            this.btnProyect.Name = "btnProyect";
-            this.btnProyect.Size = new System.Drawing.Size(618, 52);
-            this.btnProyect.TabIndex = 5;
-            this.btnProyect.Text = "PROYECTO";
-            this.btnProyect.UseVisualStyleBackColor = true;
-            this.btnProyect.Click += new System.EventHandler(this.btnProyect_Click);
             // 
             // btnStudent
             // 
@@ -89,13 +78,43 @@
             this.btnStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStudent.Font = new System.Drawing.Font("Segoe UI Symbol", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStudent.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnStudent.Location = new System.Drawing.Point(3, 207);
+            this.btnStudent.Location = new System.Drawing.Point(3, 149);
             this.btnStudent.Name = "btnStudent";
             this.btnStudent.Size = new System.Drawing.Size(618, 52);
             this.btnStudent.TabIndex = 6;
             this.btnStudent.Text = "ESTUDIANTE";
             this.btnStudent.UseVisualStyleBackColor = true;
             this.btnStudent.Click += new System.EventHandler(this.btnStudent_Click);
+            // 
+            // btnProyect
+            // 
+            this.btnProyect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.SetColumnSpan(this.btnProyect, 2);
+            this.btnProyect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProyect.Font = new System.Drawing.Font("Segoe UI Symbol", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProyect.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnProyect.Location = new System.Drawing.Point(3, 79);
+            this.btnProyect.Name = "btnProyect";
+            this.btnProyect.Size = new System.Drawing.Size(618, 52);
+            this.btnProyect.TabIndex = 5;
+            this.btnProyect.Text = "PROYECTO";
+            this.btnProyect.UseVisualStyleBackColor = true;
+            this.btnProyect.Click += new System.EventHandler(this.btnProyect_Click);
+            // 
+            // btnAssignaments
+            // 
+            this.btnAssignaments.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.SetColumnSpan(this.btnAssignaments, 2);
+            this.btnAssignaments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAssignaments.Font = new System.Drawing.Font("Segoe UI Symbol", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAssignaments.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnAssignaments.Location = new System.Drawing.Point(3, 219);
+            this.btnAssignaments.Name = "btnAssignaments";
+            this.btnAssignaments.Size = new System.Drawing.Size(618, 52);
+            this.btnAssignaments.TabIndex = 7;
+            this.btnAssignaments.Text = "ASIGNACIONES";
+            this.btnAssignaments.UseVisualStyleBackColor = true;
+            this.btnAssignaments.Click += new System.EventHandler(this.btnAssignaments_Click);
             // 
             // FrmMenu
             // 
@@ -105,7 +124,7 @@
             this.ClientSize = new System.Drawing.Size(708, 508);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmMenu";
             this.Text = "Menú";
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -119,5 +138,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnStudent;
         private System.Windows.Forms.Button btnProyect;
+        private System.Windows.Forms.Button btnAssignaments;
     }
 }

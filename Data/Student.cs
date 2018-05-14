@@ -35,7 +35,7 @@ namespace Data
         /// <param name="prom">El promedio del estudiante.</param>
         /// <param name="dni">Identificador de la persona.</param>
         /// <returns></returns>
-        public int CreateStudent(double prom, string dni)
+        public int CreateStudent(double prom, string dni, bool assigned)
         {
             int idstudent = 0;
 
@@ -45,6 +45,7 @@ namespace Data
 
                 parameters.Add("@Prom", prom);
                 parameters.Add("@IdPerson", dni);
+                parameters.Add("@Assigned", assigned);
                 parameters.Add("@IdStudent", idstudent, dbType: DbType.Int32, direction: ParameterDirection.Output);
 
                 connection.Execute("dbo.spStudent_Insert", parameters, commandType: CommandType.StoredProcedure);
@@ -77,7 +78,6 @@ namespace Data
         /// <returns>Retorna a todas las personas.</returns>
         public List<Entities.Person> GetAllPersons()
         {
-
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnectionSql.CnnString("Pasantia")))
             {
                 var persons = connection.Query<Entities.Person>("dbo.spPerson_GetPersons", commandType: CommandType.StoredProcedure).ToList();
@@ -86,13 +86,20 @@ namespace Data
             }
 
         }
-
+        /// <summary>
+        /// Obtiene todas las preferencias de todos los alumnos
+        /// </summary>
+        /// <param name="students">lista de los estudiantes.</param>
+        /// <param name="connection">variable para ejectar el procedimiento de la DB.</param>
         private void GetPreferencesStudent(List<Entities.Student> students, IDbConnection connection)
         {
             foreach (var s in students)
                 s.Preferences = connection.Query<string>("dbo.spStudent_GetPreferences", commandType: CommandType.StoredProcedure).ToList();
         }
-
+        /// <summary>
+        /// Trae todos los alumnos de la DB.
+        /// </summary>
+        /// <returns>Devuelve todos estudiantes con sus respectivos datos.</returns>
         public List<Entities.Student> GetAllStudents()
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnectionSql.CnnString("Pasantia")))
@@ -102,6 +109,23 @@ namespace Data
                 GetPreferencesStudent(students, connection);
 
                 return students;
+            }
+        }
+        /// <summary>
+        /// Cambia valor a un estudiante en especial.
+        /// </summary>
+        /// <param name="assigned">El dato que se quiere cambiar.</param>
+        /// <param name="dni">El alumno al que se quiere modificar.</param>
+        public void UpdateStudent(bool assigned, string dni)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnectionSql.CnnString("Pasantia")))
+            {
+                var parameters = new DynamicParameters();
+
+                parameters.Add("@Assigned", assigned);
+                parameters.Add("@IdPerson", dni);
+
+                connection.Execute("dbo.spStudent_UpdateAssigned", parameters, commandType: CommandType.StoredProcedure);
             }
         }
     }
